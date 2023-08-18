@@ -120,3 +120,8 @@ li.bookLists {
   font-size: 0.813rem;
   opacity: 0.5;
 }
+
+.currChap-container {
+  display: flex;
+  flex-direction: column;
+}
