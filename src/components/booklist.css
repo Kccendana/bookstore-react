@@ -1,0 +1,127 @@
+li.bookLists {
+  display: grid;
+  grid-template-columns: 0.4fr 0.3fr 0.3fr;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  padding: 2rem;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.938rem;
+}
+
+.btn-actionList {
+  display: flex;
+  margin-top: 1.313rem;
+}
+
+.b-author,
+.actionBtn {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.b-author,
+.actionBtn,
+.book-t {
+  font-family: "Roboto Slab", serif;
+}
+
+.actionBtn {
+  border: none;
+  background-color: transparent;
+  padding-right: 1rem;
+}
+
+.comments,
+.remove {
+  border-right: 2px solid #e8e8e8;
+}
+
+.remove,
+.edit {
+  padding-left: 1rem;
+}
+
+.book-t {
+  margin-top: 0.188rem;
+  font-size: 1.375rem;
+  letter-spacing: -0.2px;
+}
+
+.book-category {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+
+.pieChart {
+  border-radius: 50%;
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid #307bbe;
+  border-left-color: #e8e8e8;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.completion {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.comPercent {
+  font-size: 2rem;
+}
+
+.completed-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  font-size: 0.875rem;
+  opacity: 0.5;
+}
+
+.updateBtn {
+  font-weight: 300;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  margin-top: 20px;
+}
+
+.currentChapter,
+.chapHeading {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: #121212;
+}
+
+.currentChapter {
+  font-size: 0.92rem;
+  margin-top: 0.438rem;
+}
+
+.chapHeading {
+  font-size: 0.813rem;
+  opacity: 0.5;
+}
+
+.currChap-container {
+  display: flex;
+  flex-direction: column;
+}

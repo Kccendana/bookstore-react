@@ -1,0 +1,53 @@
+.button {
+  cursor: pointer;
+  width: fit-content;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-size: 0.813rem;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+}
+
+.title,
+.input {
+  font-family: "Montserrat", sans-serif;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.input {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #121212;
+  width: 50%;
+}
+
+.addbook {
+  margin-top: 20px;
+  display: flex;
+  grid-gap: 32px;
+  gap: 32px;
+}
+
+section.formSection {
+  border-top: 2px solid #e8e8e8;
+  margin-top: 2.5rem;
+  padding-top: 2.25rem;
+}
+
+.addbookBtn {
+  width: 20%;
+}
