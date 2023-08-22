@@ -1,9 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux/es/hooks/useSelector';
-import { selectStatus } from '../redux/categories/categoriesSlice';
+import { useSelector } from 'react-redux';
 
 const Categories = () => {
-  const status = useSelector(selectStatus);
+  const status = useSelector((state) => state.categories.status);
   return (
     <p>
       {status}
