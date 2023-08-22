@@ -4,10 +4,10 @@ import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/booksSlice';
 import './addbooks.css';
 
-const options = ['Action', 'Science Fiction', 'Economy'];
+const options = ['Action', 'Science Fiction', 'Economy', 'Non-fiction'];
 
 function Addbooks() {
-  const [formData, setFormData] = useState({ title: '', category: options[0] });
+  const [formData, setFormData] = useState({ title: '', author: '', category: options[0] });
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -20,11 +20,12 @@ function Addbooks() {
     if (formData.title) {
       const newBook = {
         title: formData.title,
+        author: formData.author,
         category: formData.category,
         id: uuidv4(),
       };
       dispatch(addBook(newBook));
-      setFormData({ title: '', category: options[0] }); // Reset the form input fields
+      setFormData({ title: '', author: '', category: options[0] }); // Reset the form input fields
     }
   };
 
@@ -41,8 +42,17 @@ function Addbooks() {
           onChange={handleChange}
           required
         />
+        <input
+          type="text"
+          className="input book-author"
+          placeholder="Book author"
+          name="author"
+          value={formData.author}
+          onChange={handleChange}
+          required
+        />
         <select
-          className="input book-category"
+          className="input category"
           name="category"
           value={formData.category}
           onChange={handleChange}

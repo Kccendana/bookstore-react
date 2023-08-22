@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeBook, selectBooks } from '../redux/books/booksSlice';
+import Button from './Button';
 import './booklist.css';
 
 function BookList() {
@@ -14,15 +15,15 @@ function BookList() {
   return (
     <ul className="book-container">
       { books.map((book) => (
-        <li className="bookLists" key={book.id}>
+        <li className="bookLists" key={book.item_id}>
           <div className="book-info">
             <span className="book-category">{book.category}</span>
             <h3 className="book-t">{book.title}</h3>
-            <span className="b-author">Suzanne Dales</span>
+            <span className="b-author">{book.author}</span>
             <ul className="btn-actionList">
-              <li><button type="button" className="actionBtn comments">Comments</button></li>
-              <li><button onClick={() => dispatch(removeBook(book.id))} type="button" className="actionBtn remove">Remove</button></li>
-              <li><button type="button" className="actionBtn edit">Edit</button></li>
+              <li><Button label="Comments" type="button" className="actionBtn comments" /></li>
+              <li><Button label="Remove" type="button" className="actionBtn remove" onClick={() => dispatch(removeBook(book.item_id))} /></li>
+              <li><Button label="Edit" type="button" className="actionBtn edit" /></li>
             </ul>
           </div>
           <div className="completion">
@@ -37,8 +38,8 @@ function BookList() {
           </div>
           <div className="currChap-container">
             <span className="chapHeading">CURRENT CHAPTER</span>
-            <span className="currentChapter">{book.currentChap}</span>
-            <button type="button" className="button updateBtn">Update Chapter Progress</button>
+            <span className="currentChapter">Chapter 1</span>
+            <Button label="Update Chapter Progress" type="button" className="button updateBtn" />
           </div>
         </li>
       ))}

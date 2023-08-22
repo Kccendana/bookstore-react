@@ -27,7 +27,7 @@ li.bookLists {
 .b-author,
 .actionBtn {
   font-size: 0.875rem;
-  font-weight: 300;
+  font-weight: 400;
   color: #4386bf;
   cursor: pointer;
 }
@@ -120,6 +120,7 @@ li.bookLists {
 .chapHeading {
   font-size: 0.813rem;
   opacity: 0.5;
+  font-weight: 600;
 }
 
 .currChap-container {

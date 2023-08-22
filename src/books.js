@@ -1,28 +1,22 @@
-const books = [
+const booksItems = [
   {
-    id: 1,
-    category: 'Action',
-    title: 'Harry Potter',
-    author: 'Suzanne Collins',
-    completed: 64,
-    currentChap: 'Chapter 17',
+    item_id: 'item1',
+    title: 'The Great Gatsby',
+    author: 'John Smith',
+    category: 'Fiction',
   },
   {
-    id: 2,
-    category: 'Science Fiction',
-    title: 'Dune',
-    author: 'Frannk Herbert',
-    completed: 8,
-    currentChap: 'Chapter 3: "A Lesson Learned"',
+    item_id: 'item2',
+    title: 'Anna Karenina',
+    author: 'Leo Tolstoy',
+    category: 'Fiction',
   },
   {
-    id: 3,
-    category: 'Economy',
-    title: 'Capital in the Twenty-First Century',
-    author: 'Suzanne Collins',
-    completed: 0,
-    currentChap: 'Introduction',
+    item_id: 'item3',
+    title: 'The Selfish Gene',
+    author: 'Richard Dawkins',
+    category: 'Nonfiction',
   },
 ];
 
-export default books;
+export default booksItems;
