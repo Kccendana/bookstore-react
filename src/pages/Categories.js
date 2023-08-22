@@ -1,2 +1,4 @@
-const Categories = () => <div className="wrapper">Categories content</div>;
-export default Categories;
+import Categories from '../components/Categories';
+
+const CategoriesPage = () => <div className="wrapper"><Categories /></div>;
+export default CategoriesPage;

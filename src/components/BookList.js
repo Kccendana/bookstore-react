@@ -1,33 +1,16 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeBook, selectBooks } from '../redux/books/booksSlice';
 import './booklist.css';
 
 function BookList() {
-  const books = [
-    {
-      id: 1,
-      category: 'Action',
-      title: 'Harry Potter',
-      author: 'Suzanne Collins',
-      completed: 64,
-      currentChap: 'Chapter 17',
-    },
-    {
-      id: 2,
-      category: 'Science Fiction',
-      title: 'Dune',
-      author: 'Frannk Herbert',
-      completed: 8,
-      currentChap: 'Chapter 3: "A Lesson Learned"',
-    },
-    {
-      id: 3,
-      category: 'Economy',
-      title: 'Capital in the Twenty-First Century',
-      author: 'Suzanne Collins',
-      completed: 0,
-      currentChap: 'Introduction',
-    },
-  ];
+  const books = useSelector(selectBooks);
+  const dispatch = useDispatch();
+  if (books.length === 0) {
+    return (
+      'Bookstore is empty'
+    );
+  }
   return (
     <ul className="book-container">
       { books.map((book) => (
@@ -35,10 +18,10 @@ function BookList() {
           <div className="book-info">
             <span className="book-category">{book.category}</span>
             <h3 className="book-t">{book.title}</h3>
-            <span className="b-author">{book.author}</span>
+            <span className="b-author">Suzanne Dales</span>
             <ul className="btn-actionList">
               <li><button type="button" className="actionBtn comments">Comments</button></li>
-              <li><button type="button" className="actionBtn remove">Remove</button></li>
+              <li><button onClick={() => dispatch(removeBook(book.id))} type="button" className="actionBtn remove">Remove</button></li>
               <li><button type="button" className="actionBtn edit">Edit</button></li>
             </ul>
           </div>
@@ -46,7 +29,7 @@ function BookList() {
             <div className="pieChart" />
             <div className="completed-info">
               <span className="comPercent">
-                {book.completed}
+                0
                 %
               </span>
               <span className="tag">Completed</span>

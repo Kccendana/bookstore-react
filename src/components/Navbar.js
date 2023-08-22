@@ -12,7 +12,7 @@ const Nav = () => (
           <NavLink
             to="/"
           >
-            Home
+            Books
           </NavLink>
         </li>
         <li>
