@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook, selectBooks } from '../redux/books/booksSlice';
+import {
+  fetchBook, selectBooks, deleteBook,
+} from '../redux/books/booksSlice';
 import Button from './Button';
 import './booklist.css';
 
 function BookList() {
   const books = useSelector(selectBooks);
+
   const dispatch = useDispatch();
-  if (books.length === 0) {
-    return (
-      'Bookstore is empty'
-    );
-  }
+
+  useEffect(() => {
+    dispatch(fetchBook());
+  }, [dispatch]);
   return (
     <ul className="book-container">
       { books.map((book) => (
@@ -22,7 +24,7 @@ function BookList() {
             <span className="b-author">{book.author}</span>
             <ul className="btn-actionList">
               <li><Button label="Comments" type="button" className="actionBtn comments" /></li>
-              <li><Button label="Remove" type="button" className="actionBtn remove" onClick={() => dispatch(removeBook(book.item_id))} /></li>
+              <li><Button label="Remove" type="button" onClick={() => dispatch(deleteBook(book.item_id))} className="actionBtn remove" /></li>
               <li><Button label="Edit" type="button" className="actionBtn edit" /></li>
             </ul>
           </div>

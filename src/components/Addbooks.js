@@ -22,7 +22,7 @@ function Addbooks() {
         title: formData.title,
         author: formData.author,
         category: formData.category,
-        id: uuidv4(),
+        item_id: uuidv4(),
       };
       dispatch(addBook(newBook));
       setFormData({ title: '', author: '', category: options[0] }); // Reset the form input fields
