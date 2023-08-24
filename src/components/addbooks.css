@@ -12,6 +12,13 @@
   font-family: "Roboto Slab", serif;
 }
 
+.button:hover {
+  box-shadow: 5px 7px 14px 1px rgba(69, 71, 71, 0.75);
+  color: #0290ff;
+  background-color: white;
+  border: 1px solid #0290ff;
+}
+
 .title,
 .input {
   font-family: "Montserrat", sans-serif;
