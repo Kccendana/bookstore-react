@@ -1,6 +1,5 @@
 {
   "name": "bookstore-react",
-  "homepage": "https://kccendana.github.io/bookstore-react/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
