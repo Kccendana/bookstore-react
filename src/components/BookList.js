@@ -41,7 +41,7 @@ function BookList() {
           <div className="currChap-container">
             <span className="chapHeading">CURRENT CHAPTER</span>
             <span className="currentChapter">Chapter 1</span>
-            <Button label="Update Chapter Progress" type="button" className="button updateBtn" />
+            <Button label="Update Progress" type="button" className="button updateBtn" />
           </div>
         </li>
       ))}
